@@ -80,6 +80,6 @@ export default function Signup() {
           </button>
         </form>
       </div>
-    </div>  
+    </div>
   );
 }
