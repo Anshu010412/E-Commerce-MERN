@@ -13,7 +13,7 @@ const router = createBrowserRouter([
   { path: "/", element: <Home /> },
   { path: "/login", element: <Login /> },
   { path: "/signup", element: <Signup /> },
-  { path: "/product/:id", element: <ProductDetail /> },
+  { path: "/products/:id", element: <ProductDetail /> },
 
   //admin route path
   { path: "/admin/products", element: <ProductList /> },

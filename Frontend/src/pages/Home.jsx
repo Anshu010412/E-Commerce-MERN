@@ -61,7 +61,7 @@ export default function Home() {
               className="w-full h-40 object-contain bg-white rounded"
             />
             <h2 className="font-semibold text-lg mt-2">{product.title}</h2>
-            <p className="text-gray-600">${product.price}</p>
+            <p className="text-gray-600">₹{product.price}</p>
           </Link>
         ))}
       </div>
