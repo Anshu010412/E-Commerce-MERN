@@ -45,7 +45,7 @@ export default function AddProduct() {
 
   return (
     <div className="max-w-lg mx-auto mt-25 bg-white pt-8 shadow-md rounded">
-      <h2 className="text-2xl font-bold mb-4 text-center font-serif">
+      <h2 className="text-2xl font-bold mb-4 text-center">
         Add New Product
       </h2>
       <form onSubmit={handleSubmit} className="space-y-4 p-4">

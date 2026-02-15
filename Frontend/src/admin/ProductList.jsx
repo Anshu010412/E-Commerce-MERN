@@ -30,7 +30,7 @@ export default function ProductList() {
   return (
     <div className="max-w-5xl mx-auto mt-20">
       <div className="flex items-center justify-between mb-8 ">
-        <h2 className="text-2xl font-bold text-center font-serif">
+        <h2 className="text-2xl font-bold text-center">
           Product List
         </h2>
         <Link

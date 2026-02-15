@@ -53,7 +53,7 @@ export default function Home() {
           <Link
             key={product._id}
             to={`/products/${product._id}`}
-            className="border rounded p-3 shadow hover:shadow-lg transition"
+            className="border rounded-xl p-3 shadow hover:shadow-xl transition"
           >
             <img
               src={product.image}
