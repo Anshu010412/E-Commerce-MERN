@@ -35,14 +35,14 @@ export default function ProductList() {
         </h2>
         <Link
           to="/admin/products/add"
-          className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+          className="bg-green-500 text-gray-900 px-4 py-2 rounded hover:bg-green-400"
         >
           Add New Product
         </Link>
       </div>
       <table className="w-full table-auto border-collapse border border-gray-200">
         <thead>
-          <tr className="bg-gray-100">
+          <tr className="bg-gray-200">
             <th className="border border-gray-200 px-4 py-2">Title</th>
             <th className="border border-gray-200 px-4 py-2">Price</th>
             <th className="border border-gray-200 px-4 py-2">Stock</th>
@@ -68,7 +68,7 @@ export default function ProductList() {
               <td className="border border-gray-200 px-4 py-2">
                 <Link
                   to={`/admin/products/edit/${product._id}`}
-                  className="bg-blue-500 text-white px-3 py-1 rounded mr-2 hover:bg-blue-600"
+                  className="bg-blue-500 text-white px-3 py-1 rounded mr-5 hover:bg-blue-600"
                 >
                   Edit
                 </Link>
