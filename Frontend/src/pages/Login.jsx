@@ -20,7 +20,8 @@ export default function Login() {
 
       //save token in localstorage
       localStorage.setItem("token", response.data.token);
-      setMsg(response.data.message);
+      localStorage.setItem("userId", response.data.user._id);
+      setMsg("Login Successfully");
 
       //navigate to home page after 1 second
       setTimeout(() => {
