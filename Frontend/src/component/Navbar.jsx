@@ -34,7 +34,7 @@ export default function Navbar() {
 
   return (
     <nav className="sticky top-0 z-50 flex justify-between p-4 shadow bg-gray-900 text-white">
-      <Link to="/" className="font-bold text-xl text-cyan-500">
+      <Link to="/" className="font-bold text-xl text-amber-400">
         UrbanMart
       </Link>
 
