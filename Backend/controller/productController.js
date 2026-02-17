@@ -27,7 +27,7 @@ export const getProduct = async (req, res) => {
     if (category) {
       filter.category = category;
     }
-
+    {/*Apply Searching and sorting*/}
     const products = await Product.find(filter).sort({ createdAt: -1 });
     res.status(200).json(products);
   } catch (err) {
