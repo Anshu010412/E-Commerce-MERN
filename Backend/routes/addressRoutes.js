@@ -1,5 +1,5 @@
 import express from "express";
-import { saveAddress, getAddresses } from "../controller/addressController.js";
+import { saveAddress, getAddresses ,deleteAddress } from "../controller/addressController.js";
 
 const router = express.Router();
 
@@ -8,5 +8,8 @@ router.post("/add", saveAddress);
 
 //route to getAddresses
 router.get("/:userId", getAddresses);
+
+//route to deleteAddress
+router.delete("/:addressId", deleteAddress);
 
 export default router;
