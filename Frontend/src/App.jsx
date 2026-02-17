@@ -4,6 +4,8 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import ProductDetail from "./pages/ProductDetail";
 import Cart from "./pages/Cart";
+import Checkout from "./pages/checkout";
+import CheckoutAddress from './pages/checkoutAddress';
 import ProductList from "./admin/ProductList";
 import AddProduct from "./admin/AddProduct";
 import EditProduct from "./admin/EditProduct";
@@ -33,6 +35,8 @@ const router = createBrowserRouter([
       { path: "/admin/products/add", element: <AddProduct /> },
       { path: "/admin/products/edit/:id", element: <EditProduct /> },
       { path: "/cart", element: <Cart /> },
+      { path: "/checkout", element: <Checkout /> },
+      { path: "/checkout-address", element: <CheckoutAddress /> },
     ],
   },
 ]);
