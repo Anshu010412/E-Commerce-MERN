@@ -28,15 +28,14 @@ export default function ProductList() {
   };
 
   return (
-    <div className="max-w-5xl mx-auto mt-20">
+    <div className="max-w-5xl mx-auto mt-10">
       <div className="flex items-center justify-between mb-8 ">
         <h2 className="text-2xl font-bold text-center">
           Product List
         </h2>
         <Link
           to="/admin/products/add"
-          className="bg-green-500 text-gray-900 px-4 py-2 rounded hover:bg-green-400"
-        >
+          className="bg-green-500 text-gray-900 px-4 py-2 rounded hover:bg-green-400">
           Add New Product
         </Link>
       </div>
@@ -68,14 +67,12 @@ export default function ProductList() {
               <td className="border border-gray-200 px-4 py-2">
                 <Link
                   to={`/admin/products/edit/${product._id}`}
-                  className="bg-blue-500 text-white px-3 py-1 rounded mr-5 hover:bg-blue-600"
-                >
+                  className="bg-blue-500 text-white px-3 py-1 rounded mr-5 hover:bg-blue-600">
                   Edit
                 </Link>
                 <button
                   onClick={() => deletedProduct(product._id)}
-                  className="text-red-500 hover:underline"
-                >
+                  className="text-red-500 hover:underline">
                   Delete
                 </button>
               </td>

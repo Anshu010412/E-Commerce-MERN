@@ -33,33 +33,37 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="sticky top-0 z-50 flex justify-between p-4 shadow bg-white">
-      <Link to="/" className="font-bold text-xl">
+    <nav className="sticky top-0 z-50 flex justify-between p-4 shadow bg-gray-900 text-white">
+      <Link to="/" className="font-bold text-xl text-cyan-500">
         UrbanMart
       </Link>
 
-      <div className="flex gap-4 items-center">
-        <Link to="/cart" className="relative text-xl">
-          🛒
-          {cartCount > 0 && (
-            <span className="absolute -top-2 -right-3 bg-red-500 text-white rounded-xl shadow-md px-1 text-xs">
-              {cartCount}
-            </span>
-          )}
-        </Link>
+      <div className="flex gap-6 items-center">
+        {/* show cart only if user is logged in */}
+        {userId && (
+          <Link to="/cart" className="relative text-xl">
+            🛒
+            {cartCount > 0 && (
+              <span className="absolute -top-2 -right-3 bg-red-500 text-white rounded-xl shadow-md px-1 text-xs">
+                {cartCount}
+              </span>
+            )}
+          </Link>
+        )}
+
 
         {/*if user id not found*/}
         {!userId ? (
           <>
-            <Link to="/login" className="text-lg">
+            <Link to="/login" className="text-lg font-semibold">
               Login
             </Link>
-            <Link to="/signup" className="text-lg">
+            <Link to="/signup" className="text-lg font-semibold">
               SignUp
             </Link>
           </>
         ) : (
-          <button onClick={logout} className="text-lg">
+          <button onClick={logout} className="text-lg font-semibold">
             Logout
           </button>
         )}
