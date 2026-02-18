@@ -19,46 +19,76 @@ Folder mapping (backend)
 - **Controllers:** [Backend/controller](Backend/controller) — request handlers
 - **Models:** [Backend/model](Backend/model) — Mongoose schemas
 
+
 Endpoints (summary)
 
 **Auth** (/api/auth)
-- POST /api/auth/register — Register a new user
-  - Body: { "name": "", "email": "", "password": "" }
+
+<div style="background: rgba(0,0,0,0.03); padding:12px; border-radius:8px; border:1px solid rgba(0,0,0,0.06); margin-bottom:12px;">
+- **POST** <code>/api/auth/register</code> — Register a new user  
+  - Body: { "name": "", "email": "", "password": "" }  
   - Response: user object + token
-- POST /api/auth/login — Login and receive token
-  - Body: { "email": "", "password": "" }
+
+- **POST** <code>/api/auth/login</code> — Login and receive token  
+  - Body: { "email": "", "password": "" }  
   - Response: { token, user }
-- GET /api/auth/profile — Get current user profile (auth required)
+
+- **GET** <code>/api/auth/profile</code> — Get current user profile (auth required)
+</div>
 
 **Products** (/api/products)
-- GET /api/products — List products (query params for search/pagination)
+
+<div style="background: rgba(0,0,0,0.03); padding:12px; border-radius:8px; border:1px solid rgba(0,0,0,0.06); margin-bottom:12px;">
+- **GET** <code>/api/products</code> — List products (query params for search/pagination)  
   - Response: [ { product } ]
-- GET /api/products/:id — Get product by id
-- POST /api/products — Create product (admin)
+
+- **GET** <code>/api/products/:id</code> — Get product by id
+
+- **POST** <code>/api/products</code> — Create product (admin)  
   - Body: product fields (title, price, description, images, etc.)
-- PUT /api/products/:id — Update product (admin)
-- DELETE /api/products/:id — Delete product (admin)
+
+- **PUT** <code>/api/products/:id</code> — Update product (admin)
+
+- **DELETE** <code>/api/products/:id</code> — Delete product (admin)
+</div>
 
 **Cart** (/api/cart)
-- GET /api/cart — Get current user's cart (auth required)
-- POST /api/cart — Add item to cart
+
+<div style="background: rgba(0,0,0,0.03); padding:12px; border-radius:8px; border:1px solid rgba(0,0,0,0.06); margin-bottom:12px;">
+- **GET** <code>/api/cart</code> — Get current user's cart (auth required)
+
+- **POST** <code>/api/cart</code> — Add item to cart  
   - Body: { "productId": "", "quantity": number }
-- PUT /api/cart/:itemId — Update cart item quantity
-- DELETE /api/cart/:itemId — Remove item from cart
+
+- **PUT** <code>/api/cart/:itemId</code> — Update cart item quantity
+
+- **DELETE** <code>/api/cart/:itemId</code> — Remove item from cart
+</div>
 
 **Address** (/api/address)
-- GET /api/address — List user's saved addresses (auth required)
-- POST /api/address — Add new address
+
+<div style="background: rgba(0,0,0,0.03); padding:12px; border-radius:8px; border:1px solid rgba(0,0,0,0.06); margin-bottom:12px;">
+- **GET** <code>/api/address</code> — List user's saved addresses (auth required)
+
+- **POST** <code>/api/address</code> — Add new address  
   - Body: { "street": "", "city": "", "state": "", "zip": "", "country": "" }
-- PUT /api/address/:id — Update address
-- DELETE /api/address/:id — Remove address
+
+- **PUT** <code>/api/address/:id</code> — Update address
+
+- **DELETE** <code>/api/address/:id</code> — Remove address
+</div>
 
 **Order** (/api/order)
-- POST /api/order — Place an order (auth required)
-  - Body: { "cartId": "", "addressId": "", "paymentMethod": "" }
+
+<div style="background: rgba(0,0,0,0.03); padding:12px; border-radius:8px; border:1px solid rgba(0,0,0,0.06); margin-bottom:12px;">
+- **POST** <code>/api/order</code> — Place an order (auth required)  
+  - Body: { "cartId": "", "addressId": "", "paymentMethod": "" }  
   - Response: order confirmation
-- GET /api/order — Get user's orders (auth required)
-- GET /api/order/:id — Get order details
+
+- **GET** <code>/api/order</code> — Get user's orders (auth required)
+
+- **GET** <code>/api/order/:id</code> — Get order details
+</div>
 
 Error handling
 - Responses typically include HTTP status codes and a JSON body like:
