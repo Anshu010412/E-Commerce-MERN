@@ -6,6 +6,7 @@ import ProductDetail from "./pages/ProductDetail";
 import Cart from "./pages/Cart";
 import Checkout from "./pages/checkout";
 import CheckoutAddress from './pages/checkoutAddress';
+import OrderSuccess from './pages/OrderSucess'
 import ProductList from "./admin/ProductList";
 import AddProduct from "./admin/AddProduct";
 import EditProduct from "./admin/EditProduct";
@@ -31,12 +32,14 @@ const router = createBrowserRouter([
       { path: "/products/:id", element: <ProductDetail /> },
 
       //admin route path
-      { path: "/admin/products", element: <ProductList /> },
+      { path: "/admin/products", element: <ProductList /> }, //edit product add and update through this apis
       { path: "/admin/products/add", element: <AddProduct /> },
       { path: "/admin/products/edit/:id", element: <EditProduct /> },
+
       { path: "/cart", element: <Cart /> },
-      { path: "/checkout", element: <Checkout /> },
       { path: "/checkout-address", element: <CheckoutAddress /> },
+      { path: "/checkout", element: <Checkout /> },
+      { path: "/order-success/:id", element: <OrderSuccess /> },
     ],
   },
 ]);
